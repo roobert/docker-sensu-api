@@ -38,4 +38,5 @@ docker-compose up -d
 ## Test
 ```
 docker logs sensu-api
+curl -I localhost:4567
 ```
