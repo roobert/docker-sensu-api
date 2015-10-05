@@ -12,5 +12,3 @@ sensu-api:
     - REDIS_URL=redis://redis:6379
     - SENSU_API_PORT=4567
     - SENSU_SERVICE=api
-  ports:
-    - "4567:4567"

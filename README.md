@@ -22,7 +22,6 @@ docker run \
   -d \
   --link redis \
   --link rabbitmq \
-  -p 4567:4567 \
   -e TRANSPORT_NAME=rabbitmq \
   -e RABBITMQ_URL=amqp://rabbitmq:5672 \
   -e REDIS_URL=redis://redis:6379 \
