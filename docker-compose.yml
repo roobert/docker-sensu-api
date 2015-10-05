@@ -1,0 +1,16 @@
+sensu-api:
+  build: .
+  container_name: sensu-api
+  restart: always
+  image: sensu-api
+  external_links:
+    - redis
+    - rabbitmq
+  environment:
+    - TRANSPORT_NAME=rabbitmq
+    - RABBITMQ_URL=amqp://rabbitmq:5672
+    - REDIS_URL=redis://redis:6379
+    - SENSU_API_PORT=4567
+    - SENSU_SERVICE=api
+  ports:
+    - "4567:4567"
